@@ -1,6 +1,17 @@
 name: YNOV pipeline CI/CD
 
-on: [push, workflow_dispatch]
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      server-python-version:
+        type: choice
+        description: Which Python version will be runned on production server?
+        options:
+        - "3.9"
+        - "3.10"
+        - "3.11"
+        required: true
 
 jobs:
   build:
