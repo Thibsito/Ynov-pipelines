@@ -23,5 +23,5 @@ jobs:
       
       - name: Lint with black
         run: |
-          black .
+          black . --check
       
