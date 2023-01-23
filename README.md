@@ -1,2 +1,2 @@
 # Ynov-pipelines
-.github/workflows/badge.svg
+/.github/workflows/badge.svg
