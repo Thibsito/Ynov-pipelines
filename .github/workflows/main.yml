@@ -11,7 +11,7 @@ jobs:
             python: [3.9, 3.10, 3.11]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Python 3.10
+      - name: Setup Python ${{ matrix.python }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Python 3.10
+      - name: Setup Python ${{ matrix.python }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
@@ -56,7 +56,7 @@ jobs:
       - name: MEP
         run: echo "MEP on server"
 
-      - name: Setup Python 3.10
+      - name: Setup Python ${{ matrix.python }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
