@@ -64,7 +64,6 @@ jobs:
       - name: Test with Pytest-cov
         run: |
           pytest --cov=. . --doctest-modules --ignore=main.py
-          coverage-badge -o coverage.svg -f
          
 
   deploy:
