@@ -63,7 +63,7 @@ jobs:
 
       - name: Test with Pytest-cov
         run: |
-          pytest --cov=. . --doctest-modules --ignore=main.py
+          pytest --cov=. . --doctest-modules --ignore=main.py --cov-report html
          
 
   deploy:
