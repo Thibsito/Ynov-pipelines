@@ -64,6 +64,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: test
+    environment:
+      name: prod
 
     steps:
       - name: MEP
