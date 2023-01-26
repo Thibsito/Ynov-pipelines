@@ -84,6 +84,12 @@ jobs:
         run: |
           pip install requests
           python -c "import requests; exit(1) if requests.get('https://www.google.fr').status_code != 200 else exit(0)"
+      
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: htmlcov
+
 
   post-on-slack:
     runs-on: ubuntu-latest
